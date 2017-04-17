@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170403063016) do
+ActiveRecord::Schema.define(version: 20170417142139) do
 
   create_table "addresses", force: :cascade do |t|
     t.string "street_1"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20170403063016) do
   create_table "rounds", force: :cascade do |t|
     t.datetime "start",     null: false
     t.integer  "course_id"
+    t.datetime "end",       null: false
     t.index ["course_id"], name: "index_rounds_on_course_id"
   end
 
