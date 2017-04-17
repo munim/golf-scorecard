@@ -96,9 +96,11 @@ courses[0, 4].each do |course|
     shuffled_players = players.shuffle
 
     puts "[INFO] Creating rounds #{r} of 20"
+    start_time = Faker::Date.between(2.years.ago, 1.months.ago)
     round = Round.create!(
              :course => course,
-             :start => Faker::Date.between(2.years.ago, 1.months.ago)
+             :start => start_time,
+             :end => start_time + rand(90..240).minutes
     )
 
     (0..rand(3)).each do |g|
