@@ -3,5 +3,8 @@ class Round < ApplicationRecord
   has_many :players, through: :groups
   has_many :groups
   has_many :scores
-#  has_many :players, through: :groups
+
+  def is_round_in_progress
+    self.start > self.end
+  end
 end
