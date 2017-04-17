@@ -1,0 +1,32 @@
+<% @page_title = "Login" %>
+
+<div class="container">
+  <div class="row">
+    <div class="medium-12 text-center">
+      <h1>Login</h1>
+    </div>
+  </div>
+    <%= form_tag do %>
+      <div class="row">
+        <div class="medium-6 medium-offset-3 columns">
+          <%= label_tag :username do %>
+              Username
+              <%= text_field_tag :username %>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-6 medium-offset-3 columns">
+          <%= label_tag :password do %>
+              Password
+              <%= text_field_tag :password %>
+          <% end %>
+        </div>
+      </div>
+      <div class="row">
+        <div class="medium-6 medium-offset-3 columns">
+          <%= submit_tag 'Login', class: 'button' %>
+        </div>
+      </div>
+    <% end %>
+</div>
