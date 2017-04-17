@@ -49,8 +49,6 @@ config/initializers/secret_token.rb
 
 # if using bower-rails ignore default bower_components path bower.json files
 /vendor/assets/bower_components
-*.bowerrc
-bower.json
 
 # Ignore pow environment settings
 .powenv
@@ -169,4 +167,3 @@ fabric.properties
 .idea/sonarlint
 
 # End of https://www.gitignore.io/api/ruby,rails,bower,rubymine
-
