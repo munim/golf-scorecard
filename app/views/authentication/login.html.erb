@@ -2,31 +2,30 @@
 
 <div class="container">
   <div class="row">
-    <div class="medium-12 text-center">
+    <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
       <h1>Login</h1>
     </div>
+    <div class="row">
+      <div class="col-md-4 col-lg-4 col-md-offset-4 col-lg-offset-4">
+        <%= form_tag do %>
+            <div class="form-group">
+              <%= text_field_tag :username, nil, class: 'form-control input-lg', :placeholder => 'Username' %>
+            </div>
+            <div class="form-group">
+              <%= password_field_tag :password, nil, class: 'form-control input-lg', :placeholder => 'Password' %>
+            </div>
+            <div class="form-group">
+              <%= label_tag :remember_me do %>
+                <%= check_box_tag :remember_me, class: 'form-control' %> Remember me
+
+              <% end %>
+            </div>
+
+            <%= submit_tag 'Login', class: 'btn btn-lg btn-default' %>
+            <%= link_to 'Forgot password?', 'google.com' %>
+        <% end %>
+      </div>
+    </div>
   </div>
-    <%= form_tag do %>
-      <div class="row">
-        <div class="medium-6 medium-offset-3 columns">
-          <%= label_tag :username do %>
-              Username
-              <%= text_field_tag :username %>
-          <% end %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="medium-6 medium-offset-3 columns">
-          <%= label_tag :password do %>
-              Password
-              <%= text_field_tag :password %>
-          <% end %>
-        </div>
-      </div>
-      <div class="row">
-        <div class="medium-6 medium-offset-3 columns">
-          <%= submit_tag 'Login', class: 'button' %>
-        </div>
-      </div>
-    <% end %>
 </div>
+
